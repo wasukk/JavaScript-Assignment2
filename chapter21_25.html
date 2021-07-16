@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center">Chpater 21-25</h1> 
+    <h2 style="text-align:center"> <i>(String Methods)</i></h2> 
+    <p>
+        1. Write a program that takes two user inputs for first and last name using prompt and merge them in a new variable titled fullName. <br>
+           Greet the user using his full name.
+    </p>
+    <button onclick="question1()">Question 1</button>
+    <p>
+        2. Write a program to take a user input about his favorite mobile phone model. <br>
+           Find and display the length of user input in your browser
+
+    </p>
+    <button onclick="question2()">Question 2</button>
+
+    <p>
+        3. Write a program to find the index of letter “n” in the word “Pakistani” and display the result in your browser . 
+    </p>
+    <button onclick="question3()">Question 3</button>
+    <p>
+        4. Write a program to find the last index of letter “l” in the word “Hello World” and display the result in your browser.
+    </p>
+    <button onclick="question4()">Question 4</button>
+    <p>
+        5. Write a program to find the character at 3rd index in the word “Pakistani” and display the result in your browser.
+    </p>
+    <button onclick="question5()">Question 5</button>
+    <p>
+        6. Repeat Q1 using string concat() method.
+    </p>
+    <button onclick="question6()">Question 6</button>
+    <p>
+        7. Write a program to replace the “Hyder” to “Islam” in the word “Hyderabad” and display the result in your browser.
+    </p>
+    <button onclick="question7()">Question 7</button>
+    <p>
+        8. Write a program to replace all occurrences of “and” in the string with “&” and display the result in your browser. <br>
+           var message = “Ali and Sami are best friends. They play cricket and football together.”;
+    </p>
+    <button onclick="question8()">Question 8</button>
+
+    <p>
+        9. Write a program that converts a string “472” to a number 472. Display the values & types in your browser.
+    </p>
+    <button onclick="question9()">Question 9</button>
+    <p>
+        10. Write a program that takes user input. Convert and show the input in capital letters.
+    </p>
+    <button onclick="question10()">Question 10</button>
+    <p>
+        11. Write a program that takes user input. Convert and show the input in title case.
+    </p>
+    <button onclick="question11()">Question 11</button>
+    <p>
+        12. Write a program that converts the variable num to string. <br>
+            var num = 35.36 ; <br>
+            Remove the dot to display “3536” display in your browser.
+    </p>
+    <button onclick="question12()">Question 12</button>
+    <p>
+        13. Write a program to take user input and store username in a variable. <br>
+            If the username contains any special symbol among [@ . , !], <br>
+            prompt the user to enter a valid username.
+    </p>
+    <button onclick="question13()">Question 13</button>
+
+    <p>
+
+        14. You have an array A = [cake”, “apple pie”, “cookie”, “chips”, “patties”] <br>
+            Write a program to enable “search by user input” in an array. <br>
+            After searching, prompt the user whether the given item is found in the list or not. <br>
+            Note: Perform case insensitive search. Whether the user enters cookie, Cookie, COOKIE or coOkIE, <br>
+            program should inform about its availability.
+    </p>
+    <button onclick="question14()">Question 14</button>
+    <p>
+        16. Write a program to convert the following string to an array using string split method. <br>
+            var university = “University of Karachi”; <br>
+            Display the elements of array in your browser.
+    </p>
+    <button onclick="question16()">Question 16</button>
+
+    <p>
+        17. Write a program to display the last character of a user input.
+    </p>
+    <button onclick="question17()"> Question 17</button>
+    <p>
+
+        18. You have a string “The quick brown fox jumps over the lazy dog”. <br>
+            Write a program to count number of occurrences of word “the” in given string.
+    </p>
+    <button onclick="question18()"> Question 18</button>
+    <hr>
+    <div>
+        <a href="index.html"><button> <b> HOME </b> </button></a>
+        <a href="chapter17_20.html"> <button> Chapter 17-20  </button> </a>
+        <a href="chapter26_30.html"> <button> Chapter 26-30  </button> </a>
+    </div>
+    
+    
+</body>
+
+<script>
+    
+    function question1(){
+        var string1 = prompt("Enter first name:");
+        var string2 = prompt("Enter last name:");
+  
+        document.write("Asalam o Alekum! "+ string1+" "+string2);
+    }
+    function question2(){
+        var stringValue = prompt();
+        document.write("My favorite  phone is : "+ stringValue +"<br>");
+        document.write("Lenght of String : "+stringValue.length);
+    }
+    function question3(){
+        var pak = "Pakistan";
+        document.write(pak+"<br>");
+        document.write("Index of 'n' in 'Pakistan' is "+pak.indexOf("n"));
+    }
+    function question4(){
+        var value = "HELLO WORLD!";
+        document.write(value+"<br>");
+        document.write("Last index of 'L' in 'HELLO WORLD!' is:   "+value.lastIndexOf("L"));
+    }
+    function question5(){
+        var pak = "Pakistan";
+        document.write(pak+"<br>");
+        document.write("Character at index 3 is "+ pak[3]);
+    }
+    function question6(){
+        var string1 = prompt("Enter first name:");
+        var string2 = prompt("Enter last name:");
+        var fullName = string1.concat(" "+string2)
+        document.write("Asalam o Alekum! "+ fullName);
+    }
+    function question7(){
+        var city = "Hyderabad";
+        document.write("City : "+ city+"<br>");
+        city = city.replace("Hyder","Islam")
+        document.write("After Replacement: "+ city );
+    }
+    function question8(){
+        var message = "Ali and Sami are best friends. They play cricket and football together.";
+        document.write(message+"<br>");
+        message = message.replace(/and/g,"&");
+        document.write(message);
+    }
+    function question9(){
+        var value = "472";
+        document.write("Value "+ value+"<br>");
+        document.write("Type: "+ typeof(value)+"<br>");
+        value = parseInt(value);
+        document.write("Value "+ value+"<br>");
+        document.write("Type: "+ typeof(value));
+    }
+    function question10(){
+        var message = prompt();
+        document.write("User Input: " + message+"<br>");
+        document.write(" Upper Case: "+ message.toUpperCase());
+    }
+    function question11(){
+        var userInput = prompt("Enter your message");
+        document.write("User Input : "+userInput+"<br>");
+        userInput = userInput.charAt(0).toUpperCase() + userInput.slice(1);
+        document.write("Title Case: "+userInput);   
+    }
+    function question12(){
+        var num = 35.36;
+        document.write(" Number: "+ num +"<br>");
+        num = num.toString();
+        document.write("Result: "+ num);
+    }
+    function question13(){
+            var name = prompt();
+            var notValid = ['!','@', '.', ','];
+            for(var i=0;i<name.length;i++){
+                for(var j=0; j<notValid.length; j++){
+                    if(name.charAt(i)===notValid[j]){
+                        document.write(notValid[j]+"  Not allowed");
+                        // break;
+                        name = prompt(notValid[j]+" not allowed Please Enter Valid Name: ")
+                        document.write("Asalam O Alekum! "+ name)
+                        break;
+                    }
+                    
+                }
+            }
+    }
+    function question14(){
+        var bakeryItems = ['cake','apple pie','cookie', 'chips','patties'];
+        var userInput = prompt("Welcome to ABC Bakery, What do you want to order");
+            userInput = userInput.toLowerCase();
+        var found = 0;
+        for(var i=0; i<bakeryItems.length; i++){
+            if(bakeryItems[i]===userInput){
+                 document.write(bakeryItems[i]+" is Available at index " + i + " of our bakery");
+                 found = found+1
+            }
+        }
+        if(found==0){
+            document.write("We are sorry. "+ userInput + " is not available in our bakery");
+        }
+       
+        
+    }
+
+    function question16(){
+        var uniName = "University of Karachi";
+        var uniNameInArray = uniName.split('');
+        document.write(uniName+"<br>");
+        for(var i=0; i<uniNameInArray.length; i++){
+            document.write(uniNameInArray[i]+"<br>")
+        }
+    }
+    function question17(){
+            var userInput = prompt();
+            var showLastIndex = userInput.charAt(userInput.length-1);
+            document.write("User Input: "+ userInput +"<br>");
+            document.write("Last Character: " + showLastIndex);
+    }
+
+    function question18(){
+        var str = "the quick brown fox jumps over the lazy dog";
+        var splitSrt = str.split(" ");
+        var count = 0;
+        for(var i=0; i<splitSrt.length; i++){
+            if(splitSrt[i]==="the"){
+                count = count+1;
+            }
+        }
+        document.write("Text: "+ str+"<br>");
+        document.write("There are "+ count + " occurence(s) of word 'the'.");
+    }
+
+</script>
+</html>

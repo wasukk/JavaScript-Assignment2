@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center">Chpater 26-30</h1> 
+    <h2 style="text-align:center"> <i>(Math Methods)</i></h2> 
+    <p>
+        1. Write a program that takes a positive integer from user & display the following in your browser. <br>
+            a. number <br>
+            b. round off value of the number <br>
+            c. floor value of the number <br>
+            d. ceil value of the number <br>
+    </p>
+    <button onclick="question1()"> Question 1</button>
+    <p>
+        2. Write a program that takes a negative floating point number from user & display the following in your browser. <br>
+            a. number <br>
+            b. round off value of the number  <br>
+            c. floor value of the number  <br>
+            d. ceil value of the number <br>
+    </p>
+    <button onclick="question2()"> Question 2</button>
+    
+    <p>
+        3. Write a program that displays the absolute value of a number. <br>
+             E.g. absolute value of -4 is 4 & absolute value of 5 is 5 
+    </p>
+    <button onclick="question3()"> Question 3</button>
+    
+    <p>
+        4. Write a program that simulates a dice using random() method of JS Math class. <br>
+           Display the value of dice in your browser.: <br>
+           Random dice value : 4 <br>
+           Random dice value : 6
+
+    </p>
+    <button onclick="question4()"> Question 4</button>
+
+    <p>
+        5. Write a program that simulates a coin toss using random() method of JS Math class. <br>
+           Display the value of coin in your browser <br>
+           1 Random Coin Value : Head <br>
+           2 Random Coin Value : Tails 
+    </p>
+    <button onclick="question5()"> Question 5</button>
+
+    <p>
+        6. Write a program that shows a random number between 1 and 100 in your browser. <br>
+        Random value between 1 - 100 is : 84
+    </p>
+    <button onclick="question6()"> Question 6</button>
+
+    <p>
+        7. Write a program that asks the user about his weight. Parse the user input and display his weight in your browser. <br>
+             Possible user inputs can be: <br>
+             a. 50 <br>
+             b. 50kgs <br>
+             c. 50.2kgs <br>
+             d. 50.2kilograms
+    </p>
+    <button onclick="question7()"> Question 7</button>
+
+    <p>
+        8. Write a program that stores a random secret number from 1 to 10 in a variable. Ask the user to input a number between 1 and 10. <br>
+           If the user input equals the secret number, congratulate the user.
+    </p>
+    <button onclick="question8()"> Question 8</button>
+   <hr>
+    <div>
+    <a href="index.html"><button> <b> HOME </b> </button></a>
+    <a href="chapter17_20.html"> <button> Chapter 17-20  </button> </a>
+    <a href="chapter21_25.html"> <button> Chapter 21-25  </button> </a>
+    </div>
+</body>
+<script>
+        function question1(){
+            var num = +prompt();
+            document.write("Value "+ num +"<br>")
+            document.write ("Round of Value " +Math.round(num)+"<br>");
+            document.write("Floor of Value "+Math.floor(num));
+            document.write("Ceil of Value "+ Math.ceil(num)+"<br>");
+        }
+        function question2(){
+            var num = +prompt();
+            document.write("Value "+ num +"<br>")
+            document.write ("Round of Value " +Math.round(num)+"<br>");
+            document.write("Floor of Value "+Math.floor(num)+"<br>");
+            document.write("Ceil of Value "+ Math.ceil(num)+"<br>");
+        }
+        function question3(){
+            var num = +prompt()
+            document.write(" The Absolute value of "+ num+ " is " +Math.abs(num));
+        }
+        function question4(){
+            var dice = 6;
+            var diceValue =  (Math.random()*dice)+1;
+            diceValue = Math.round(diceValue);
+            document.write("Random Value of Dice "+diceValue);
+        }
+        function question5(){
+            var coin = 2;
+            coin =Math.round((Math.random()*coin+1));
+
+            if(coin===1){
+                document.write("Random Coin Value : "+coin+" Head ");
+            }
+            else{
+                document.write("Random Coin Value : "+ coin+" Tails ");
+            }
+        }
+        function question6(){
+            var num = 100;
+            var numValue = (Math.random()*100)+1;
+            numValue = Math.round(numValue);
+            document.write("Random value between 1 - 100 is : "+ numValue);
+        }
+        function question7(){
+            var weight = parseFloat( prompt("Enter your age :"));
+            document.write("Your weight is : "+ weight + " kilograms");
+        }
+        function question8(){
+            var secretNumber = 2;
+            var secretNumberShow = Math.round(Math.random()*secretNumber+1);
+                userGuess = +prompt("Enter number in between 1- 10");
+                if(userGuess === secretNumberShow){
+                    document.write(" Congratulation! ");
+                }
+                else{
+                    document.write(userGuess +" is not secret number "+"<br>"+"Please try again " +"<br>"+ " The Secret number was " + secretNumberShow);
+
+                }
+        }
+       
+
+</script>
+</html>

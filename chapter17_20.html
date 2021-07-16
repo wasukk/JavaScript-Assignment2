@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center">Chpater 17-20</h1> 
+    <h2 style="text-align:center"> <i>(Arrays and Loops)</i></h2> 
+    <p>
+        1. Declare and initialize an empty multidimensional array. (Array of arrays) <br>
+        2. Declare and initialize a multidimensional array representing the following matrix: <br>
+            <ul>
+                <li>0 1 2 3</li>
+                <li>1 0 1 2</li>
+                <li>2 1 0 1</li>
+            </ul>
+    </p>
+    <button  onclick="question1_2()"> Show The Array</button>
+    <p>
+        3. Write a program to print numeric counting from 1 to 10.
+    </p>
+    <button onclick="question3()">Generate Series</button>
+   <p>
+        4. Write a program to print multiplication table of any number using for loop. <br>
+           table number & length should be taken as an input from user.
+   </p>
+    <button onclick="question4()">Generate Table</button>
+    <p>
+        5. Write a program to print items of the following array using for loop: <br> 
+           fruits = [“apple”, “banana”, “mango”, “orange”, “strawberry”]
+    </p>
+    <button onclick="question5()"> Fruits </button>
+    <p>
+        6. Generate the following series in your browser. See example output. <br>
+           a. Counting: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 <br>
+           b. Reverse counting: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 <br>
+           c. Even: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20  <br>
+           d. Odd: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 <br>
+           e. Series: 2k, 4k, 6k, 8k, 10k, 12k, 14k, 16k, 18k, 20k
+    </p>
+    <button onclick="question6()"> Question 6</button>
+    <p>
+        7. You have an array A = [“cake”, “apple pie”, “cookie”, “chips”, “patties”] <br>
+           Write a program to enable “search by user input” in an array. After searching, <br>
+           prompt the user whether the given item is found in the list or not.
+
+    </p>
+    <button onclick="question7()"> Question 7</button>
+    <p>
+        8. Write a program to identify the largest number in the given array. <br>
+           A = [24, 53, 78, 91, 12]. <br>
+        9. Write a program to identify the smallest number in the given array. <br>
+           A = [24, 53, 78, 91, 12]   <br>
+    </p>
+    <button onclick="question8_9()"> Question 8_9</button>
+
+    <p>
+        10. Write a program to print multiples of 5 ranging 1 to 100.
+    </p>
+    <button onclick="question10()"> Question10</button>
+
+    <hr>
+    <div>
+    <a href="index.html"><button> <b> HOME </b> </button></a>
+    <a href="chapter21_25.html"> <button> Chapter 21-25  </button> </a>
+    <a href="chapter26_30.html"> <button> Chapter 26-30  </button> </a>
+    </div>
+
+</body>
+    <script>
+        function question1_2(){
+            var arr = [[0,1,2,3],[1,0,1,2],[2,1,0,1]];
+            for(var i=0; i<arr.length; i++){
+                document.write(arr[i]+ "<br>");
+            }
+        }
+        function question3(){
+            for(var i=1; i<=10;i++){
+                document.write(i+"<br>")
+            }
+        }
+        function question4(){
+            var num = +prompt("Enter Number to show its multiplication Table:" );
+            var length = +prompt("Enter Length of multiplication tabel: ");
+            document.write("Multiplication table of "+num +" Lenght "+ length+ "<br>");
+            for(var i=1;i<=length; i++){
+                document.write(num + " x " + i + " = " + i*num +"<br>");
+            }
+        }
+        function question5(){
+            var fruits = ['apple', 'banana', 'mango', 'orange', 'strawberry']
+            // console.table(fruits);
+            for(var i=0; i<fruits.length; i++){
+                document.write(fruits[i]+"<br>")
+            }
+            document.write("Fruits with their index number <br>");
+            for(var i=0; i<fruits.length; i++){
+                document.write("Element at index "+i+" "+fruits[i] +"<br>");
+            }
+        }
+        function question6(){
+            var rangeForArray = +prompt("Enter Range of Array: ");
+            var numArr = [];
+            for(var i=1; i<=rangeForArray; i++){
+                numArr.push(i);
+            }
+            document.write("Counting : ");
+            for(var i=0; i<numArr.length; i++){
+                document.write(numArr[i]+" ");
+            }
+            document.write(" <br> Reverse Counting : ");
+            for(var i=numArr.length; i>=0; i--){
+                document.write(numArr[i]+" ");
+            }
+            document.write(" <br> Even : ");
+            for(var i=0; i<numArr.length; i++){
+                if(numArr[i]%2===0){
+                    document.write(numArr[i]+" ");
+                }
+            }
+            document.write(" <br> Odd : ");
+            for(var i=0; i<numArr.length; i++){
+                if(numArr[i]%2===1){
+                    document.write(numArr[i]+" ");
+                }
+            }
+            document.write(" <br> Series : ");
+            for(var i=0; i<numArr.length; i++){
+                if(numArr[i]%2===0){
+                    document.write(numArr[i]+"k"+","+" ");
+                }
+            }
+        }
+        function question7(){
+            // var a = ['cake','apple pie','cookie','chips','patties']
+            // var nameOfItems = prompt("Welcome to ABC Backery, what do you want to order sir/ma'am?");
+
+            var bakeryItems = ['cake','apple pie','cookie', 'chips','patties'];
+        var userInput = prompt("Welcome to ABC Bakery, What do you want to order");
+            userInput = userInput.toLowerCase();
+        var found = 0;
+        for(var i=0; i<bakeryItems.length; i++){
+            if(bakeryItems[i]===userInput){
+                 document.write(bakeryItems[i]+" is Available at index " + i + " of our bakery");
+                 found = found+1
+            }
+        }
+        if(found==0){
+            document.write("We are sorry. "+ userInput + " is not available in our bakery");
+        }
+       
+            // if(nameOfItems.substring){
+            //     for(var i=0; i<a.length; i++){
+            //         if(nameOfItems==a[i]){
+            //         document.write(nameOfItems+" is available at index "+ i +" in our backery <br>");
+            //         break;
+            //         }
+            //     // else{
+            //     //     document.write("We are sorry "+ nameOfItems+" is not available in our backery <br>");
+            //     // }
+            //     }
+            //     // document.write(" We are sorry "+ nameOfItems+ " is not available in our backery");
+                
+            // }
+            // else{
+            //     document.write(" We are sorry "+ nameOfItems+ " is not available in our backery");
+            // }
+         }
+         function question8_9(){
+             var arr = [24, 53, 78, 91, 12];
+             var largest= 0;
+            document.write("Array items: ");
+            for(var i=0; i<arr.length; i++){
+                document.write(arr[i]+", ");
+            }
+            document.write("<br>The largest number in array is: ");
+            for(var i=0; i<arr.length; i++){
+                if(arr[i]>largest){
+                    largest = arr[i];
+                }
+            }
+            document.write(largest+"<br>");
+
+            document.write("<br>The smallest number in array is: ");
+            for(var i=0; i<arr.length; i++){
+                if(arr[i]<largest){
+                    largest = arr[i];
+                }
+            }
+             document.write(largest);  
+         }
+         function question10(){
+             var  num = 5;
+             for(var i=1; i<=100; i++){
+                var value = num*i;
+                document.write(value+", ");
+                if(value==100){
+                    break
+                }
+             }
+            //  document.write(value);
+         }
+    </script>
+</html>
